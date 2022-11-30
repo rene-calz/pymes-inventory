@@ -37,15 +37,41 @@ class Pymes{
 			moneyYear = mon;
 		}
 		
+		string getName(){
+			return namePyme;
+		}
+		
+		string getRFC(){
+			return rfcPyme;
+		}
+		
+		string getAdress(){
+			return adressPyme;
+		}
+		
+		string getCEO(){
+			return ceoPyme;
+		}
+		
+		int getNumWorkers(){
+			return numWorkers;
+		}
+		
+		float getMoneyYear(){
+			return moneyYear;
+		}
+		
 		void showPyme(){
 			cout << "Informacion disponible" << endl; 
 			cout << "Nombre: " << namePyme << endl; 
 			cout << "RFC: " << rfcPyme << endl; 
+			cout << "Direccion: " << adressPyme << endl;
 			cout << "Nombre del director: " << ceoPyme << endl; 
 			cout << "Numero de trabajadores: " << numWorkers << endl; 
 			cout << "Cantidad de pesos por ano: " << moneyYear << endl;
 		}
 };
+
 
 Pymes pmes[1000];
 
@@ -71,6 +97,79 @@ void addPyme(int i){
 	
 }
 	
+void lookPyme(int i){
+		int k = i+1, d, numWorkers;
+		string name, rfc, ceo, adress;
+		float money; 
+		
+		cout << "Ingrese el criterio de busqueda: " << endl << "(1) Por nombre" << endl << "(2) Por RFC" << endl <<  "(3) Por direccion " << endl << "(4) Por director" << endl << "(5) Por numero de empleados" << endl << "(6) Por cantidad de pesos al ano" << endl; 
+		cin >> d; 
+		
+		switch(d){
+			case 1: cout << "Ingrese el nombre por buscar: " << endl; cin >> name;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getName() == name){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+			
+			case 2: cout << "Ingrese el RFC por buscar: " << endl; cin >> rfc;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getRFC() == rfc){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+					
+			case 3: cout << "Ingrese la direccion por buscar: " << endl; cin >> adress;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getAdress() == adress){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+					
+			case 4: cout << "Ingrese el nombre de director por buscar: " << endl; cin >> ceo;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getCEO() == ceo){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+					
+			case 5: cout << "Ingrese el numero de empleados por buscar: " << endl; cin >> numWorkers;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getNumWorkers() == numWorkers){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+					 
+			case 6: cout << "Ingrese la cantidad de pesos por ano por buscar: " << endl; cin >> money;
+					for (int i = 0; i < k; i++){
+						if (pmes[i].getMoneyYear() == money){
+							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
+							pmes[i].showPyme();
+							cout << endl; 
+						} 
+					}
+					break; 
+			
+			default: cout << "Opcion invalida, intente de nuevo..." << endl; break;
+		}
+	
+}
 
 
 int main(){
@@ -87,9 +186,9 @@ int main(){
 		switch(d){
 			case 1: o++; addPyme(o); break; 
 			
-			//case 2: suma(); break; 
+			//case 2: ; break; 
 			
-			case 3: pmes[o].showPyme(); break;
+			case 3: lookPyme(o); break;
 			
 			//case 4: mayor(); break;
 			
