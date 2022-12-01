@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
+#include <string>
+
 using namespace std; 
 				
 class Pymes{
@@ -125,10 +127,10 @@ void addPyme(int i){
 	float money;
 	
 	cout << "Agregar una Pyme " << endl; 
-	cout << "Ingrese el nombre: " << endl; cin >> name; 
+	cout << "Ingrese el nombre: " << endl; cin.ignore(); getline(cin, name); 
 	cout << "Ingrese el RFC: " << endl; cin >> rfc; 
-	cout << "Ingrese la direccion: " << endl; cin >> adress; 
-	cout << "Ingrese el nombre del director: " << endl; cin >> ceo; 
+	cout << "Ingrese la direccion: " << endl; cin.ignore(); getline(cin, adress); 
+	cout << "Ingrese el nombre del director: " << endl; getline(cin, ceo); 
 	cout << "Ingrese la cantidad de empleados: " << endl; cin >> num;
 	cout << "Ingrese la cantidad de pesos por anio: " <<endl ; cin >> money; 
 	
@@ -148,12 +150,12 @@ void addWorker(int i){
 	int age, k = i; 
 	
 	cout << "Agregar un trabajador " << endl; 
-	cout << "Ingrese el nombre: " << endl; cin >> name; 
+	cout << "Ingrese el nombre: " << endl; cin.ignore(); getline(cin, name); 
 	cout << "Ingrese la edad: " << endl; cin >> age; 
-	cout << "Ingrese la posicion: " << endl; cin >> position; 
-	cout << "Ingrese el nombre de la empresa donde trabaja: " << endl; cin >> pyName; 
+	cout << "Ingrese la posicion: " << endl; cin.ignore(); getline(cin, position); 
+	cout << "Ingrese el nombre de la empresa donde trabaja: " << endl; getline(cin, pyName); 
 	cout << "Ingrese la RFC de donde trabaja: " << endl; cin >> pyRFC;
-	cout << "Ingrese la direccion de la empresa donde trabaja: " <<endl ; cin >> pyAdress; 
+	cout << "Ingrese la direccion de la empresa donde trabaja: " <<endl ; cin.ignore(); getline(cin, pyAdress); 
 	
 	wrkr[k].setNameWorker(name);
 	wrkr[k].setAge(age);
@@ -177,7 +179,7 @@ void lookPyme(int i){
 		system("CLS");
 		
 		switch(d){
-			case 1: cout << "Ingrese el nombre por buscar: " << endl; cin >> name;
+			case 1: cout << "Ingrese el nombre por buscar: " << endl; cin.ignore(); getline(cin, name);
 					for (int i = 0; i < k; i++){
 						if (pmes[i].getName() == name){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
@@ -213,7 +215,7 @@ void lookPyme(int i){
 					system ("PAUSE");
 					break; 
 					
-			case 3: cout << "Ingrese la direccion por buscar: " << endl; cin >> adress;
+			case 3: cout << "Ingrese la direccion por buscar: " << endl; cin.ignore(); getline(cin, adress);
 					for (int i = 0; i < k; i++){
 						if (pmes[i].getAdress() == adress){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
@@ -231,7 +233,7 @@ void lookPyme(int i){
 					system ("PAUSE");
 					break; 
 					
-			case 4: cout << "Ingrese el nombre de director por buscar: " << endl; cin >> ceo;
+			case 4: cout << "Ingrese el nombre de director por buscar: " << endl; cin.ignore(); getline(cin, ceo);
 					for (int i = 0; i < k; i++){
 						if (pmes[i].getCEO() == ceo){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
@@ -301,7 +303,7 @@ void lookWorker(int i){
 		system("CLS");
 		
 		switch(d){
-			case 1: cout << "Ingrese el nombre por buscar: " << endl; cin >> name;
+			case 1: cout << "Ingrese el nombre por buscar: " << endl; cin.ignore(); getline(cin, name);
 					for (int i = 0; i < k; i++){
 						if (wrkr[i].getNameWorker() == name){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
@@ -337,7 +339,7 @@ void lookWorker(int i){
 					system ("PAUSE");
 					break; 
 					
-			case 3: cout << "Ingrese la posicion por buscar: " << endl; cin >> position;
+			case 3: cout << "Ingrese la posicion por buscar: " << endl; cin.ignore(); getline(cin, position);
 					for (int i = 0; i < k; i++){
 						if (wrkr[i].getPosition() == position){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
@@ -355,7 +357,7 @@ void lookWorker(int i){
 					system ("PAUSE");
 					break; 
 					
-			case 4: cout << "Ingrese la empresa por buscar: " << endl; cin >> company;
+			case 4: cout << "Ingrese la empresa por buscar: " << endl; cin.ignore(); getline(cin, company);
 					for (int i = 0; i < k; i++){
 						if (pmes[i].getName() == company){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
