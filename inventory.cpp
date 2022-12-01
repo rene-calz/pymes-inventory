@@ -169,7 +169,8 @@ void addWorker(int i){
 void lookPyme(int i){
 		int k = i+1, d, numWorkers;
 		string name, rfc, ceo, adress;
-		float money; 
+		float money;
+		bool flag = false; 
 		
 		cout << "Ingrese el criterio de busqueda: " << endl << "(1) Por nombre" << endl << "(2) Por RFC" << endl <<  "(3) Por direccion " << endl << "(4) Por director" << endl << "(5) Por numero de empleados" << endl << "(6) Por cantidad de pesos al anio" << endl; 
 		cin >> d; 
@@ -182,8 +183,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 			
@@ -193,8 +201,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -204,8 +219,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -215,8 +237,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -226,8 +255,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					 
@@ -237,8 +273,15 @@ void lookPyme(int i){
 							cout << "Pyme " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 			
@@ -251,6 +294,7 @@ void lookWorker(int i){
 		int k = i+1, d, numWorkers, age;
 		string name, rfc, ceo, adress, position, company;
 		float money; 
+		bool flag = false;
 		
 		cout << "Ingrese el criterio de busqueda: " << endl << "(1) Por nombre" << endl << "(2) Por edad" << endl <<  "(3) Por posicion " << endl << "(4) Por empresa" << endl << "(5) Por RFC de la empresa" << endl;
 		cin >> d;
@@ -263,8 +307,15 @@ void lookWorker(int i){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
 							wrkr[i].showWorker();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 			
@@ -274,8 +325,15 @@ void lookWorker(int i){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
 							wrkr[i].showWorker();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -285,8 +343,15 @@ void lookWorker(int i){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
 							wrkr[i].showWorker();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -296,8 +361,15 @@ void lookWorker(int i){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
 							pmes[i].showPyme();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 					
@@ -307,8 +379,15 @@ void lookWorker(int i){
 							cout << "Trabajador " << i + 1 << " con informacion coincidente: " << endl; 
 							wrkr[i].showWorker();
 							cout << endl; 
+							flag = true;
 						} 
 					}
+					
+					if(flag == false){
+						cout << "Pyme no encontrada" << endl;
+						flag = false;
+					}
+					
 					system ("PAUSE");
 					break; 
 			
@@ -322,10 +401,11 @@ int main(){
 	int d, py = -1, wk = -1;
 	bool flag = true;
 
+	cout << "--- Bienvenido al inventario de Pymes ---" << endl; 
+	system ("PAUSE");
 	
 	while (flag == true){
-	
-		cout << "--- Bienvenido al inventario de Pymes ---" << endl; 
+		system("CLS");
 		cout << "Indique la opcion de lo que quiere hacer: " << endl; 
 		cout << "(1) Agregar PYME" << endl << "(2) Agregar trabajador" << endl << "(3) Consultar PYME" << endl << "(4) Consultar trabajador" << endl << "(5) Cerrar" << endl; cin >> d;
 		
