@@ -10,7 +10,7 @@ criterios si existe algún empleado o empresa que cumpla con estos, ya sea por n
 ## Explicacion breve del código 
 
 El programa usa el paradigma de programación orientada a objetos (POO) para crear dos clases. La primera de estas se denominó "Pymes", esta clase tiene sus atributos y métodos. 
-Por otro lado, también se creó una clase hija de esta primera, denominada "Workers", análogamente a la previa clase, esta también tiene sus atributos (heradados y no heradados) 
+Por otro lado, también se creó una clase hija de esta primera, denominada "Workers", análogamente a la previa clase, esta también tiene sus atributos (heredados y no heredados) 
 y sus métodos.
 
 La relación de herencia a grandes rasgos funciona de la siguiente forma:
