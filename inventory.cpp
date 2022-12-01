@@ -312,7 +312,7 @@ void lookWorker(int i){
 					}
 					
 					if(flag == false){
-						cout << "Pyme no encontrada" << endl;
+						cout << "Trabajador no encontrado" << endl;
 						flag = false;
 					}
 					
@@ -330,7 +330,7 @@ void lookWorker(int i){
 					}
 					
 					if(flag == false){
-						cout << "Pyme no encontrada" << endl;
+						cout << "Trabajador no encontrado" << endl;
 						flag = false;
 					}
 					
@@ -348,7 +348,7 @@ void lookWorker(int i){
 					}
 					
 					if(flag == false){
-						cout << "Pyme no encontrada" << endl;
+						cout << "Trabajador no encontrado" << endl;
 						flag = false;
 					}
 					
@@ -366,7 +366,7 @@ void lookWorker(int i){
 					}
 					
 					if(flag == false){
-						cout << "Pyme no encontrada" << endl;
+						cout << "Trabajador no encontrado" << endl;
 						flag = false;
 					}
 					
@@ -384,7 +384,7 @@ void lookWorker(int i){
 					}
 					
 					if(flag == false){
-						cout << "Pyme no encontrada" << endl;
+						cout << "Trabajador no encontrado" << endl;
 						flag = false;
 					}
 					
